@@ -4,7 +4,7 @@ target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
-.idea
+.idea/**
 .idea/misc.xml
 .idea/material_theme_project_new.xml
 .idea/uiDesigner.xml
