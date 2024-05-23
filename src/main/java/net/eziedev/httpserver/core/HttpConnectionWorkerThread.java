@@ -23,6 +23,7 @@ public class HttpConnectionWorkerThread extends Thread{
         try {
             inputStream = socket.getInputStream();
             outputStream = socket.getOutputStream();
+
             String html = "<html><head><title>Simple Java HTTP Server</title></head><body><h1>This page was served by Simple Java HTTP Server</h1></body></html>";
             final String CRLF = "\n\r";
             String response = "HTTP/1.1 200 OK" + CRLF +
@@ -30,7 +31,7 @@ public class HttpConnectionWorkerThread extends Thread{
                     html + CRLF + CRLF;
 
             outputStream.write(response.getBytes());
-            LOGGER.info("Processing finished");
+            LOGGER.info(" * Connection Processing Finished.");
         } catch (IOException e) {
             LOGGER.error("Problem with communication", e);
         } finally {
